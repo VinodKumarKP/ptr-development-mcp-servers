@@ -1,6 +1,7 @@
 # Git Server MCP Server
 
-A comprehensive Model Context Protocol (MCP) server that provides advanced Git repository analysis and management capabilities. This server enables AI assistants to clone, analyze, and extract detailed information from Git repositories.
+A comprehensive Model Context Protocol (MCP) server that provides advanced Git repository analysis and management capabilities. 
+This server enables AI assistants to clone, analyze, and extract detailed information from Git repositories.
 
 ## Features
 
