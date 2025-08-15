@@ -1,0 +1,46 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "ruamel.yaml"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-servers"
+version = "1.0.0"
+description = "MCP Servers"
+authors = [{name = "Vinod Kumar KP", email = "vinod.kunnum-purath@capgemini.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["mcp", "mcp-servers"]
+dynamic = ["scripts"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "mcp>=1.0.0",
+    "fastmcp>=2.9.0",
+    "nest-asyncio",
+    "ruamel.yaml",
+    "requests",
+    "mcp-server-core@git+https://github.com/Capgemini-Innersource/ptr_mcp_server_core@main"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry"
+Repository = "https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry.gi"
+Issues = "https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry/issues"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mcp_servers*"]
+exclude = [".venv", "build", "mcp_servers.egg_info"]
+
+[tool.setuptools.package-data]
+"mcp_servers" = ["**/*"]
