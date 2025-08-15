@@ -91,6 +91,7 @@ def discover_scripts():
         script_name = f"{server_name.replace('_server', '').replace('_', '-')}-mcp-server"
         entry_point = f"mcp_servers.servers.{server_name}.server:main"
         scripts[script_name] = entry_point
+        scripts[server_name] = entry_point
 
     return scripts
 
