@@ -1,0 +1,9 @@
+port: 8000
+util_class_name: GitUtils
+util_file_name: git_utils.py
+description: |-
+  A comprehensive Model Context Protocol (MCP) server that provides advanced Git repository analysis and management capabilities. 
+  This server enables AI assistants to clone, analyze, and extract detailed information from Git repositories.
+tags:
+  - git
+  - analyze
