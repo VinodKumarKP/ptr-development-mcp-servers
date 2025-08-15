@@ -1,1 +1,2 @@
 mcp-server-core@git+https://github.com/Capgemini-Innersource/ptr_mcp_server_core@main
+GitPython==3.1.45
