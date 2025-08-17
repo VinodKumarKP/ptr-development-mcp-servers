@@ -1,3 +1,7 @@
 .venv
 .idea
 *.pyc
+logs
+uv.lock
+mcp_registry_servers_development.egg-info
+docker-compose.yaml
