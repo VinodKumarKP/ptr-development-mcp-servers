@@ -95,6 +95,11 @@ def discover_scripts():
 
     return scripts
 
+def get_dynamic_name():
+    """Generate package name based on directory name or environment"""
+    current_dir = os.path.basename(os.getcwd())
+    return current_dir.replace('-', '_')
+
 
 dynamic_scripts = discover_scripts()
 
@@ -106,6 +111,7 @@ console_scripts = [
 
 if __name__ == "__main__":
     setup(
+        name=get_dynamic_name(),
         install_requires=[
             "ruamel.yaml"
             # add other dependencies here
