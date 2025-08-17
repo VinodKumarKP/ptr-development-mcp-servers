@@ -3,7 +3,7 @@ import fnmatch
 import json
 from typing import List, Dict
 
-from utils.file_utils import FileUtils
+from file_utils import FileUtils
 
 
 class BatchUtils:

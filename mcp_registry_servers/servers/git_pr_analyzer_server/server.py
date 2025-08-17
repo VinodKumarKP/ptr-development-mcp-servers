@@ -19,7 +19,7 @@ import nest_asyncio  # Added import
 
 nest_asyncio.apply()  # Added call
 
-from mcp_servers.tools.git_pr_analyzer_tools import PullRequestAnalyzer
+from mcp_registry_servers.tools.git_pr_analyzer_tools import PullRequestAnalyzer
 from mcp_server_core.core.base_mcp_server import BaseMCPServer
 
 

@@ -4,7 +4,7 @@ requires = ["setuptools>=61.0", "wheel", "ruamel.yaml"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mcp_registry_servers"
+name = "mcp_registry_development_servers"
 version = "1.0.0"
 description = "MCP Servers"
 authors = [{name = "Vinod Kumar KP", email = "vinod.kunnum-purath@capgemini.com"}]

@@ -19,7 +19,7 @@ import nest_asyncio  # Added import
 
 nest_asyncio.apply()  # Added call
 
-from mcp_servers.tools.code_remediation_tools import CodeRemediationTools
+from mcp_registry_servers.tools.code_remediation_tools import CodeRemediationTools
 from mcp_server_core.core.base_mcp_server import BaseMCPServer
 
 

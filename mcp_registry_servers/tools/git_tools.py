@@ -10,11 +10,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 from urllib.parse import urlparse
 
-# import nest_asyncio  # Added import
 from git import Repo
-
-# nest_asyncio.apply()  # Added call
-
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
