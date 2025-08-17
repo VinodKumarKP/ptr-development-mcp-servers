@@ -6,12 +6,11 @@ import sys
 from pathlib import Path
 from typing import Dict, Any
 
+from ruamel.yaml import YAML
 from setuptools import setup
 
-from ruamel.yaml import YAML
-
-
 yaml = YAML()
+
 
 def load_server_config(config_directory) -> Dict[str, Any]:
     """
@@ -95,11 +94,6 @@ def discover_scripts():
 
     return scripts
 
-def get_dynamic_name():
-    """Generate package name based on directory name or environment"""
-    current_dir = os.path.basename(os.getcwd())
-    return current_dir.replace('-', '_')
-
 
 dynamic_scripts = discover_scripts()
 
@@ -111,7 +105,6 @@ console_scripts = [
 
 if __name__ == "__main__":
     setup(
-        name=get_dynamic_name(),
         install_requires=[
             "ruamel.yaml"
             # add other dependencies here
