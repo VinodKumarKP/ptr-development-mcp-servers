@@ -16,12 +16,12 @@ for path in path_list:
 
 MODEL_ID = os.environ.get('MODEL_ID', 'us.anthropic.claude-3-5-haiku-20241022-v1:0')
 
-from mcp_servers.utils.aws_utils import AWSUtils
-from mcp_servers.utils.batch_utils import BatchUtils
-from mcp_servers.utils.file_utils import FileUtils
-from mcp_servers.tools.git_tools import GitTools
-from mcp_servers.utils.prompt_generator import PromptGenerator
-from mcp_servers.utils.s3_utils import S3Utils
+from mcp_registry_servers.utils.aws_utils import AWSUtils
+from mcp_registry_servers.utils.batch_utils import BatchUtils
+from mcp_registry_servers.utils.file_utils import FileUtils
+from mcp_registry_servers.tools.git_tools import GitTools
+from mcp_registry_servers.utils.prompt_generator import PromptGenerator
+from mcp_registry_servers.utils.s3_utils import S3Utils
 from mcp_server_core.utils.logger_utils import get_logger
 
 logger = get_logger()

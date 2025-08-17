@@ -83,13 +83,13 @@ def discover_scripts():
 
     # Get the package directory
     package_dir = Path(__file__).parent
-    servers_config_directory = os.path.join(package_dir, "mcp_servers", "servers_config")
+    servers_config_directory = os.path.join(package_dir, "mcp_registry_servers", "servers_config")
 
     config = load_server_config(config_directory=servers_config_directory)
 
     for server_name in config.keys():
         script_name = f"{server_name.replace('_server', '').replace('_', '-')}-mcp-server"
-        entry_point = f"mcp_servers.servers.{server_name}.server:main"
+        entry_point = f"mcp_registry_servers.servers.{server_name}.server:main"
         scripts[script_name] = entry_point
         scripts[server_name] = entry_point
 
