@@ -4,14 +4,14 @@ requires = ["setuptools>=61.0", "wheel", "ruamel.yaml"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "mcp-servers"
+name = "mcp_registry_servers"
 version = "1.0.0"
 description = "MCP Servers"
 authors = [{name = "Vinod Kumar KP", email = "vinod.kunnum-purath@capgemini.com"}]
 license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.11"
-keywords = ["mcp", "mcp-servers"]
+keywords = ["mcp", "mcp_registry_servers"]
 dynamic = ["scripts"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -41,8 +41,8 @@ Issues = "https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry/issu
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["mcp_servers*"]
-exclude = [".venv", "build", "mcp_servers.egg_info"]
+include = ["mcp_registry_servers*"]
+exclude = [".venv", "build", "mcp_registry_servers.egg_info"]
 
 [tool.setuptools.package-data]
-"mcp_servers" = ["**/*"]
+"mcp_registry_servers" = ["**/*"]
