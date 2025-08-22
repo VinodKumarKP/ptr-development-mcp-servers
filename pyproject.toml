@@ -49,6 +49,6 @@ exclude = [".venv", "build", "mcp_registry_servers.egg_info"]
 
 # Configuration for setuptools_scm (git-based versioning)
 [tool.setuptools_scm]
-write_to = "streamlit_ui_framework/_version.py"
+write_to = "mcp_registry_servers/_version.py"
 version_scheme = "post-release"
 local_scheme = "no-local-version"
