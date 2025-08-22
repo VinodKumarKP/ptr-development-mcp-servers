@@ -5,7 +5,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mcp_registry_servers_development"
-version = "1.0.0"
 description = "MCP Servers"
 authors = [{name = "Vinod Kumar KP", email = "vinod.kunnum-purath@capgemini.com"}]
 license = {text = "MIT"}
@@ -49,6 +48,6 @@ exclude = [".venv", "build", "mcp_registry_servers.egg_info"]
 
 # Configuration for setuptools_scm (git-based versioning)
 [tool.setuptools_scm]
-write_to = "streamlit_ui_framework/_version.py"
+write_to = "mcp_registry_servers/_version.py"
 version_scheme = "post-release"
 local_scheme = "no-local-version"
