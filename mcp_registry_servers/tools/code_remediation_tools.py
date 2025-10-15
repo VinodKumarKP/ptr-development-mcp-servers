@@ -22,7 +22,7 @@ from mcp_registry_servers.utils.file_utils import FileUtils
 from mcp_registry_servers.tools.git_tools import GitTools
 from mcp_registry_servers.utils.prompt_generator import PromptGenerator
 from mcp_registry_servers.utils.s3_utils import S3Utils
-from mcp_server_core.utils.logger_utils import get_logger
+from oai_mcp_server_core.utils.logger_utils import get_logger
 
 logger = get_logger()
 
