@@ -1,7 +1,6 @@
-
 import os
 import re
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, Optional, Tuple
 from urllib.parse import urlparse
 
 import requests
@@ -12,14 +11,18 @@ class MergeRequestAnalyzer:
 
     def __init__(self, gitlab_token: Optional[str] = None, gitlab_host: str = 'https://gitlab.com'):
         self.gitlab_token = gitlab_token or os.environ.get('GITLAB_TOKEN')
-        if not self.gitlab_token:
-            raise ValueError('GitLab token required (GITLAB_TOKEN env var or parameter)')
 
         self.host = gitlab_host.rstrip('/')
+        self._headers = {}
+
+    def _get_headers(self) -> Dict[str, str]:
+        if not self.gitlab_token:
+            raise ValueError('GitLab token required (GITLAB_TOKEN env var or parameter)')
         self._headers = {
             'PRIVATE-TOKEN': self.gitlab_token,
             'Accept': 'application/json'
         }
+        return self._headers
 
     def analyze_mr_from_url(self, repo_url: str, mr_iid: int) -> Dict:
         mr_text = self._fetch_mr_text(repo_url, mr_iid)
@@ -30,7 +33,7 @@ class MergeRequestAnalyzer:
 
     def validate_access(self) -> bool:
         try:
-            resp = requests.get(f'{self.host}/api/v4/user', headers=self._headers)
+            resp = requests.get(f'{self.host}/api/v4/user', headers=self._get_headers())
             return resp.status_code == 200
         except Exception:
             return False
@@ -56,13 +59,13 @@ class MergeRequestAnalyzer:
     def _fetch_mr_text(self, repo_url: str, mr_iid: int) -> str:
         project = self._project_id(repo_url)
         url = f"{self.host}/api/v4/projects/{project}/merge_requests/{mr_iid}"
-        resp = requests.get(url, headers=self._headers)
+        resp = requests.get(url, headers=self._get_headers())
         resp.raise_for_status()
         mr = resp.json()
 
         # get changes
         changes_url = f"{self.host}/api/v4/projects/{project}/merge_requests/{mr_iid}/changes"
-        changes_resp = requests.get(changes_url, headers=self._headers)
+        changes_resp = requests.get(changes_url, headers=self._get_headers())
         changes_resp.raise_for_status()
         changes = changes_resp.json()
 
@@ -81,7 +84,8 @@ class MergeRequestAnalyzer:
                 status = 'added'
             if change.get('deleted_file'):
                 status = 'removed'
-            files.append({'filename': filename, 'additions': additions, 'deletions': deletions, 'status': status, 'patch': change.get('diff') or change.get('patch', '')})
+            files.append({'filename': filename, 'additions': additions, 'deletions': deletions, 'status': status,
+                          'patch': change.get('diff') or change.get('patch', '')})
 
         formatted = []
         formatted.append(f"Merge Request !{mr.get('iid')}: {mr.get('title')}")
