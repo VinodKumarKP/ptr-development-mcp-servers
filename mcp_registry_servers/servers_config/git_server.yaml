@@ -7,3 +7,5 @@ description: |-
 tags:
   - git
   - analyze
+env:
+  GITHUB_TOKEN: ${GITHUB_TOKEN}

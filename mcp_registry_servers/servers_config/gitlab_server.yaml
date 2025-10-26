@@ -1,5 +1,5 @@
 port: 8003
-environment:
+env:
   GITLAB_TOKEN: ${GITLAB_TOKEN}
 util_class_name: GitLabTools
 util_file_name: gitlab_tools.py

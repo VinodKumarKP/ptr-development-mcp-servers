@@ -8,4 +8,6 @@ tags:
   - git
   - pull request
   - analyze
+env:
+  GITHUB_TOKEN: ${GITHUB_TOKEN}
 
