@@ -6,7 +6,7 @@ import zipfile
 from pathlib import Path
 from typing import Dict, List, Optional
 
-from constants import Constants
+from mcp_registry_servers.utils.constants import Constants
 
 MAX_FILE_SIZE = 100000
 
