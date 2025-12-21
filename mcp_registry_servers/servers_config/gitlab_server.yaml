@@ -1,12 +1,10 @@
-port: 8003
-env:
-  GITLAB_TOKEN: ${GITLAB_TOKEN}
-util_class_name: GitLabTools
-util_file_name: gitlab_tools.py
+port: 8011
 description: |-
-  An MCP server providing GitLab repository analysis and merge-request inspection utilities.
-  Exposes cloning, language detection, repository statistics and MR formatting endpoints.
+  An MCP server providing GitLab repository analysis and merge-request inspection utilities, including cloning, language detection, repository statistics, and MR formatting.
 tags:
   - gitlab
   - analyze
   - merge_request
+source: https://github.com/Capgemini-Innersource/ptr-development-mcp-servers.git
+env:
+  GITLAB_TOKEN: ${GITLAB_TOKEN}

@@ -1,11 +1,9 @@
-port: 8000
-util_class_name: GitUtils
-util_file_name: git_utils.py
+port: 8007
 description: |-
-  A comprehensive Model Context Protocol (MCP) server that provides advanced Git repository analysis and management capabilities. 
-  This server enables AI assistants to clone, analyze, and extract detailed information from Git repositories.
+  An MCP server that provides Git repository analysis and management capabilities, enabling AI assistants to clone, analyze, and extract information from Git repositories.
 tags:
   - git
   - analyze
+source: https://github.com/Capgemini-Innersource/ptr-development-mcp-servers.git
 env:
   GITHUB_TOKEN: ${GITHUB_TOKEN}

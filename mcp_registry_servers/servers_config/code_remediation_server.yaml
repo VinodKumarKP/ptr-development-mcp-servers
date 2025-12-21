@@ -1,12 +1,10 @@
-environment:
-  RESULTS_BUCKET: ${RESULTS_BUCKET}
 port: 8001
-util_class_name: CodeRemediationUtils
-util_file_name: code_remediation_utils.py
 description: |-
-  A powerful Model Context Protocol (MCP) server that provides automated code analysis and remediation capabilities for Git repositories. 
-  This server enables AI assistants to analyze codebases, identify issues, and optionally generate remediated code suggestions.
+  A powerful MCP server for automated code analysis and remediation, enabling AI assistants to analyze codebases, identify issues, and generate remediated code suggestions.
 tags:
   - code
   - analyze
   - remediate
+source: https://github.com/Capgemini-Innersource/ptr-development-mcp-servers.git
+env:
+  RESULTS_BUCKET: ${RESULTS_BUCKET}

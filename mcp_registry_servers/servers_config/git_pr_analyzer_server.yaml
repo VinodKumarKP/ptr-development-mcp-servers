@@ -1,13 +1,10 @@
 port: 8006
-util_class_name: PullRequestAnalyzer
-util_file_name: git_pr_analyzer_utils.py
 description: |-
-  A specialized Model Context Protocol (MCP) server that provides comprehensive GitHub Pull Request analysis capabilities. 
-  This server enables AI assistants to fetch, analyze, and extract detailed insights from GitHub pull requests, including code changes, title-content mismatch detection, and automated recommendations.
+  A specialized MCP server for GitHub Pull Request analysis, enabling AI assistants to fetch, analyze, and extract insights from PRs, including code changes and automated recommendations.
 tags:
   - git
-  - pull request
+  - pull-request
   - analyze
+source: https://github.com/Capgemini-Innersource/ptr-development-mcp-servers.git
 env:
   GITHUB_TOKEN: ${GITHUB_TOKEN}
-
