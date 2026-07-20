@@ -145,13 +145,13 @@ class CodeRemediationTools:
                 "summary": summary
             }
 
-            # # Save results to S3
-            s3_url = self.s3_utils.save_to_s3(results, git_url, branch, self.RESULTS_BUCKET)
-            if s3_url:
-                results["s3_url"] = s3_url
-
-            if file_remediations:
-                results["remediated_code_s3_url"] = zip_file_s3_url
+            # # # Save results to S3
+            # s3_url = self.s3_utils.save_to_s3(results, git_url, branch, self.RESULTS_BUCKET)
+            # if s3_url:
+            #     results["s3_url"] = s3_url
+            #
+            # if file_remediations:
+            #     results["remediated_code_s3_url"] = zip_file_s3_url
 
             return results
 
