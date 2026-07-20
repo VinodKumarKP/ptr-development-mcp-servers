@@ -14,7 +14,7 @@ for path in path_list:
     if path not in sys.path:
         sys.path.append(path)
 
-MODEL_ID = os.environ.get('MODEL_ID', 'us.anthropic.claude-3-5-haiku-20241022-v1:0')
+MODEL_ID = os.environ.get('MODEL_ID', 'us.anthropic.claude-haiku-4-5-20251001-v1:0')
 
 from mcp_registry_servers.utils.aws_utils import AWSUtils
 from mcp_registry_servers.utils.batch_utils import BatchUtils
@@ -190,7 +190,7 @@ class CodeRemediationTools:
                                                           prompt=prompt)
 
             if content and len(content) > 0:
-                text = content[0].get('text', '')
+                text = content.get('text', '')
                 issues = ''
                 remediated_code_content = ''
 
