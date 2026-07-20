@@ -190,7 +190,7 @@ class CodeRemediationTools:
                                                           prompt=prompt)
 
             if content and len(content) > 0:
-                text = content.get('text', '')
+                text = content[0].get('text', '')
                 issues = ''
                 remediated_code_content = ''
 
