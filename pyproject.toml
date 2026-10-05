@@ -27,13 +27,13 @@ dependencies = [
 ]
 
 [tool.uv.sources]
- oai-mcp-server-core = { git = "https://github.com/Capgemini-Innersource/ptr_oai_agent_development_kit.git", branch = "main", subdirectory = "packages/mcp-core" }
+ oai-mcp-server-core = { git = "https://github.com/VinodKumarKP/ptr_oai_adk.git", branch = "main", subdirectory = "packages/mcp-core" }
 
 
 [project.urls]
-Homepage = "https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry"
-Repository = "https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry.gi"
-Issues = "https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry/issues"
+Homepage = "https://github.com/local-Innersource/ptr_mcp_servers_registry"
+Repository = "https://github.com/local-Innersource/ptr_mcp_servers_registry.gi"
+Issues = "https://github.com/local-Innersource/ptr_mcp_servers_registry/issues"
 
 
 [tool.setuptools.packages.find]

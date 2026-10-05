@@ -5,6 +5,6 @@ tags:
   - code
   - analyze
   - remediate
-source: https://github.com/Capgemini-Innersource/ptr-development-mcp-servers.git
+source: https://github.com/VinodKumarKP/ptr-development-mcp-servers.git
 env:
   RESULTS_BUCKET: ${RESULTS_BUCKET}

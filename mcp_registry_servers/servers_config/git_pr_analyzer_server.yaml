@@ -5,6 +5,6 @@ tags:
   - git
   - pull-request
   - analyze
-source: https://github.com/Capgemini-Innersource/ptr-development-mcp-servers.git
+source: https://github.com/VinodKumarKP/ptr-development-mcp-servers.git
 env:
   GITHUB_TOKEN: ${GITHUB_TOKEN}

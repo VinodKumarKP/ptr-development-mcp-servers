@@ -1,3 +1,3 @@
-oai-mcp-server-core @ git+https://github.com/Capgemini-Innersource/ptr_oai_agent_development_kit.git@main#subdirectory=packages/mcp-core
+oai-mcp-server-core @ git+https://github.com/VinodKumarKP/ptr_oai_adk.git@main#subdirectory=packages/mcp-core
 GitPython==3.1.45
 boto3

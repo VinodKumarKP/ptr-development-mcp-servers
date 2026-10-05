@@ -38,7 +38,7 @@ Use uv to run the server directly without local installation:
     "args": [
       "run",
       "--with",
-      "git+https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry.git",
+      "git+https://github.com/local-Innersource/ptr_mcp_servers_registry.git",
       "git-pr-analyzer-server"
     ]
   }
@@ -49,7 +49,7 @@ Use uv to run the server directly without local installation:
 Install the package first, then run the server:
 
 ```bash
-pip install git+https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry.git
+pip install git+https://github.com/local-Innersource/ptr_mcp_servers_registry.git
 ```
 
 Then configure your MCP client:
@@ -66,7 +66,7 @@ Then configure your MCP client:
 Clone the repository locally and run with uv:
 
 ```bash
-git clone https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry.git
+git clone https://github.com/local-Innersource/ptr_mcp_servers_registry.git
 ```
 
 Then configure your MCP client:
@@ -97,7 +97,7 @@ You can run the MCP server registry locally using Docker Compose. This is ideal 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry.git
+   git clone https://github.com/local-Innersource/ptr_mcp_servers_registry.git
    cd ptr_mcp_servers_registry
    ```
 
@@ -155,7 +155,7 @@ For production use or when you want to share the MCP server with multiple users,
    ssh user@your-remote-server.com
    
    # Clone the repository
-   git clone https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry.git
+   git clone https://github.com/local-Innersource/ptr_mcp_servers_registry.git
    cd ptr_mcp_servers_registry
    
    # Build and start services
@@ -208,7 +208,7 @@ Using uv command
       "args": [
         "run",
         "--with",
-        "git+https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry.git",
+        "git+https://github.com/local-Innersource/ptr_mcp_servers_registry.git",
         "git-pr-analyzer-server"
       ],
       "env": {
@@ -378,8 +378,8 @@ All errors are logged and returned with descriptive messages to help with debugg
 
 ## License
 
-This MCP server is part of the Capgemini Innersource MCP Servers Registry. Please refer to the repository for licensing information.
+This MCP server is part of the local Innersource MCP Servers Registry. Please refer to the repository for licensing information.
 
 ## Contributing
 
-This server is maintained as part of the larger MCP servers registry. For issues, feature requests, or contributions, please visit the [main repository](https://github.com/Capgemini-Innersource/ptr_mcp_servers_registry).
+This server is maintained as part of the larger MCP servers registry. For issues, feature requests, or contributions, please visit the [main repository](https://github.com/local-Innersource/ptr_mcp_servers_registry).
