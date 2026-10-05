@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mcp_registry_servers_development"
 description = "MCP Servers"
-authors = [{name = "Vinod Kumar KP", email = "vinod.kunnum-purath@capgemini.com"}]
+authors = [{name = "Vinod Kumar KP", email = "vinod.kunnum-purath@local.com"}]
 license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.11"
